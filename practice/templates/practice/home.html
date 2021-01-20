@@ -1,0 +1,142 @@
+{% extends "practice/base.html"%}
+{% load static %}
+
+{%block content%}
+
+<ul>
+  {% if request.user.is_authenticated%}
+  <li><a href="{%url 'logout'%}">Logout</a></li>
+  <li>  <a href="#"> Cart </a> </li>
+  {% else %}
+  <li><a class="active" href="{% url 'login'%}">Login</a> </li>  
+  <li><a href="{%url 'register'%}"> Register </a></li>
+  <li><a href="#about">About</a></li>
+  {% endif %}
+  
+</ul>
+<h2> SAAI HERBALS </h2>
+
+<div class="row row-cols-1 row-cols-md-2">
+  <div class="col mb-4 h-">
+    <!-- Card -->
+    <div class="card" style="width: 18rem;">
+
+      <!--Card image-->
+      <div class="view overlay">
+        <img class="card-img-top" src="{% static "practice/soap.jpg" %}"
+          alt="Card image cap">
+        
+          <div class="mask rgba-white-slight"></div>
+        
+      </div>
+
+      <!--Card content-->
+      <div class="card-body">
+
+        <!--Title-->
+        <h4 class="card-title">Soap</h4>
+        <!--Text-->
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+          card's content.</p>
+        <a href="{% url 'soap'%}">
+        <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+        <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+        </a>
+      </div>
+
+    </div>
+    <!-- Card -->
+  </div>
+  <div class="col mb-4">
+    <!-- Card -->
+    <div class="card" style="width: 18rem;">
+
+      <!--Card image-->
+      <div class="view overlay">
+        <img class="card-img-top" src="{% static "practice/shampoo.jpg" %}"
+          alt="Card image cap">
+       
+          <div class="mask rgba-white-slight"></div>
+        
+      </div>
+
+      <!--Card content-->
+      <div class="card-body">
+
+        <!--Title-->
+        <h4 class="card-title"> Shampoo</h4>
+        <!--Text-->
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+          card's content.</p>
+        
+         <a href="{% url 'shampo'%}">
+        <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+        <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+        </a>
+      </div>
+
+    </div>
+    <!-- Card -->
+  </div>
+  <div class="col mb-4 ">
+    <!-- Card -->
+    <div class="card" style="width: 18rem;">
+
+      <!--Card image-->
+      <div class="view overlay">
+        <img class="card-img-top" src="{% static "practice/facepack.jpg" %}"
+          alt="Card image cap">
+        
+          <div class="mask rgba-white-slight"></div>
+        
+      </div>
+
+      <!--Card content-->
+      <div class="card-body">
+
+        <!--Title-->
+        <h4 class="card-title">Face Pack</h4>
+        <!--Text-->
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+          card's content.</p>
+        <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+        <a href="{% url 'facepack'%}">
+        <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+        </a>
+      </div>
+
+    </div>
+    <!-- Card -->
+  </div>
+  <div class="col mb-4 h-50">
+    <!-- Card -->
+    <div class="card" style="width: 18rem;">
+
+      <!--Card image-->
+      <div class="view overlay">
+        <img class="card-img-top" src="{% static "practice/serum.jpg" %}"
+          alt="Card image cap">
+        
+          <div class="mask rgba-white-slight"></div>
+       
+      </div>
+
+      <!--Card content-->
+      <div class="card-body">
+
+        <!--Title-->
+        <h4 class="card-title">Serum</h4>
+        <!--Text-->
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+          card's content.</p>
+        <a href="{% url 'serum'%}">
+        <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+        <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+        </a>
+      </div>
+
+    </div>
+    <!-- Card -->
+  </div>
+</div>
+{% endblock %}

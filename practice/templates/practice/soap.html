@@ -1,0 +1,45 @@
+{% extends "practice/base.html"%}
+{% load static %}
+
+
+{%block content%}
+<h2> soap </h2>
+{% for product in products %}
+
+
+<div>
+<div class = "container" style="width: 18rem;">
+ <!-- Card -->
+<div class="card">
+
+  <!-- Card image -->
+  <div class="view overlay">
+    <img class="card-img-top" src="{{product.image.url}}"
+      alt="Card image cap">
+    <a href="#!">
+      <div class="mask rgba-white-slight"></div>
+    </a>
+  </div>
+
+  <!-- Card content -->
+  <div class="card-body">
+
+    <!-- Title -->
+    <h4 class="card-title">{{ product.title}}</h4>
+    <!-- Text -->
+
+    <p class="card-text">{{product.description}}</p>
+    <h5> Price : {{ product.price}} </h5>
+    <!-- Button -->
+    <a href="{{product.get_add_to_cart_url}}" class="btn btn-primary">Add to Cart</a>
+
+  </div>
+
+</div>
+</div>
+</div>
+
+
+
+{% endfor%}
+{%endblock %}
